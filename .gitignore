@@ -1,0 +1,6 @@
+*.iws
+*.launch
+.externalToolBuilders/
+.DS_Store
+.idea/
+target/
