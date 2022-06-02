@@ -4,26 +4,21 @@ package com.davi.demo.service;
 import com.davi.demo.model.Point;
 import com.davi.demo.model.Rectangle;
 import lombok.val;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.web.server.ResponseStatusException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class RectangleServiceTest {
 
     private RectangleService rectangleService;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         this.rectangleService = new RectangleService();
     }

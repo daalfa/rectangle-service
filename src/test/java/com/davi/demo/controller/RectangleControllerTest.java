@@ -9,14 +9,10 @@ import com.davi.demo.model.RectangleRequest;
 import com.davi.demo.service.RectangleService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.val;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Optional;
@@ -27,7 +23,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
 @WebMvcTest
 public class RectangleControllerTest {
 
@@ -37,10 +32,6 @@ public class RectangleControllerTest {
 	@MockBean
 	protected RectangleService rectangleService;
 
-	@Before
-	public void setUp() {
-		Mockito.reset(rectangleService);
-	}
 
 	@Test
 	public void shouldReturnIntersection() throws Exception {
